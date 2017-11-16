@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.100.2 (http://materializecss.com)
+ * Materialize vundefined (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -2117,7 +2117,9 @@ if (Vel) {
             if (typeof _this2.options.complete === 'function') {
               _this2.options.complete.call(_this2, _this2.$el);
             }
-            _this2.$overlay[0].parentNode.removeChild(_this2.$overlay[0]);
+            if (_this2.$overlay && _this2.$overlay[0] && _this2.$overlay[0].parentNode) {
+              _this2.$overlay[0].parentNode.removeChild(_this2.$overlay[0]);
+            }
           }
         };
 

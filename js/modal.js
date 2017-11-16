@@ -255,7 +255,9 @@
           if (typeof(this.options.complete) === 'function') {
             this.options.complete.call(this, this.$el);
           }
-          this.$overlay[0].parentNode.removeChild(this.$overlay[0]);
+          if (this.$overlay && this.$overlay[0] && this.$overlay[0].parentNode) {
+            this.$overlay[0].parentNode.removeChild(this.$overlay[0]);
+          }
         }
       };
 
